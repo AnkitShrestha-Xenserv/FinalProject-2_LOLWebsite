@@ -1,0 +1,114 @@
+<html>
+<head><title>Login Page</title>
+<link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+<title>Login Page</title>
+<style>
+body{
+	background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("lol.jpg");
+	background-size:cover;
+	background-position:center;
+}
+a{
+	text-decoration:none;
+	color:white;
+}
+.no{
+	position:absolute;
+	left:70;
+	bottom:-70;
+}
+.centered{
+	position:absolute;
+	color:white;
+	top:25%;
+	left:40%;
+	display:inline;
+	width:330px;
+	height:360px;
+	text-align:center;
+	opacity:1;
+}
+
+input:focus {
+	width: 100%;
+	outline:none;
+}
+.button{
+	position:relative;
+	top:-40px;
+	left:0px;
+	padding:10px;
+	color:white;
+	width:auto;
+	font-size:30px;
+	border-color:black;
+	font-weight:50px;
+	text-transform:uppercase;
+	background-color:black;
+	opacity:1;
+	cursor:pointer;
+}
+.button:hover{
+	background-color:#8c7000;
+	color:black;
+	border-color:#8c7000;
+	transition:0.3s;
+	transform:Scale(1.2);
+	opacity:1;
+}
+.head{
+	font-weight:200px;
+	font-size:50px;
+}
+.textbox{		
+		height:30px;
+		border:1px solid #8c7000;
+		text-transform:uppercase;
+		font-family:timesnewroman;
+		background-color:black;
+		color:white;
+}
+</style>
+</head>
+<body>
+<div class="centered">
+<h1 class="head">L O G I N</h1><br>
+<form  name="form"  method="POST" >
+<label for="user" >USERNAME:</label>
+<Input name="user" id="user" type="text" size="32" class="textbox" required autocomplete="off" placeholder="Enter Your Username"><br><br>
+<label for="pass">PASSWORD:</label>
+<Input name="pass" id="pass" type="password" size="32" class="textbox" required placeholder="Enter Your Password">
+<br><br><br>
+<label for="region">REGION:</label>
+<Select name="server" id="region" class="textbox">
+<option>Europe West</option><option>North America</option>
+<option>Europe Nordic & East</option><option>Korea</option>
+<option>South East Asia</option><option>Oceania</option>
+</Select>
+<!-- <button onclick="writeCookie('cookie','My Cookies',3);">Click ME!</button> -->
+<br><br><br><br>
+<button class="button"  onclick="validateForm(); return false;">Submit</button>
+<a href="home.html"><span class="no">Continue Without Logging in</span></a>
+</form>
+</div>
+<script>
+	
+function validateForm(){
+	var name=document.forms["form"]["user"].value;
+	var pass=document.forms["form"]["pass"].value;
+	var server=document.forms["form"]["server"].value;
+	if(name==pass){
+		
+
+		
+		window.location="home.html"
+	}else{
+		document.getElementById("user").value="";
+		document.getElementById("pass").value="";
+		document.getElementById("user").style.borderColor="red";
+		document.getElementById("pass").style.borderColor="red";
+	}
+}
+</script>
+</body>
+</html>

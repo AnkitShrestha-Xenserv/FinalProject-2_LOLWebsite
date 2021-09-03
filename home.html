@@ -1,0 +1,69 @@
+<html>
+<head><title>HOME</title>
+<link rel="shortcut icon" type="image/x-icon" href="icon.ico" />
+</head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<body >
+<div >
+<img src="logo.jpg" alt="logo" class="logo" >
+<header>
+<ul >
+  <li><a class="active" href="home.html">HOME</a></li>
+  <li><a href="champion.html">CHAMPIONS</a></li>
+  <li><a href="items.html">ITEMS</a></li>
+  <li><a href="skins.html">SKINS</a></li>
+<li><a href="https://universe.leagueoflegends.com/en_GB/" target="_blank">UNIVERSE</a></li>
+   <li><a href="https://euw.leagueoflegends.com/en/" target="_blank">NEWS</a></li>
+  <li class="logout"><a  href="index.html">LOG OUT</a></li>
+</ul>
+</header>
+<main>
+<div class="imagecon">
+<img id="img" src="0.jpg" class="image" ></div>
+
+<div class="bac">
+<section class="ti"><b >LEAGUE</b> OF <b>LEGENDS</b></section>
+</div>
+<div >
+<iframe class="video" src="https://www.youtube.com/embed/3Eu7NzzHC84" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> 
+</div>
+<footer>
+<img src="footer.jpg">
+</footer>
+</main>
+</div>
+</body>
+<script>
+var x=1;
+function images(element) {
+	if(x==0){
+		document.getElementById("img").src="0.jpg";
+	}else if(x==1){
+		document.getElementById("img").src="1.jpg";
+	}else if(x==2){
+		document.getElementById("img").src="2.jpg";
+	}else if(x==3){
+		document.getElementById("img").src="3.jpg";
+	}else if(x==4){
+		document.getElementById("img").src="4.jpg";
+	}else if(x==5){
+		document.getElementById("img").src="6.jpg";
+	}else if(x==6){
+		document.getElementById("img").src="7.jpg";
+	}
+	if(x==6){
+		x=-1;
+	}
+	x++;
+}
+setInterval(images,2000)
+function noBack()
+         {
+             window.history.forward()
+         }
+        noBack();
+        window.onload = noBack;
+        window.onpageshow = function(evt) { if (evt.persisted) noBack() }
+        window.onunload = function() { void (0) }
+</script>
+</html>
